@@ -23,6 +23,17 @@ body{
     height: 100vh;
     background-color: #dddddd;
 }
+.content_mudar_senha{
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 500px;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
 .content{
     background-color: #ffffff;
     border-radius: 15px;
@@ -144,7 +155,23 @@ transition: background-color .5s;
     text-align: center;
     color: #95a5a6;
 }
+.formulario_mudar_senha{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    text-align: center;
+    position: relative;
+    left: 27%;
+    bottom: 5px;
 
+}
+
+.formulario_mudar_senha input{
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+    width: 100%;
+}
 .formulario{
     display: flex;
     flex-direction: column;
