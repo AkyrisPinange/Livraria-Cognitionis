@@ -21,7 +21,7 @@ if(empty($_POST['email']) || empty($_POST['senha'])){
 if($row == 1){
   
     $_SESSION['login'] = $login;
-    header('Location: ../homepage.php');
+    header('Location: ../Exibicao.html');
     exit();
    
 }else{

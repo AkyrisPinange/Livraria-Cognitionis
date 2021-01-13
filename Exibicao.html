@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exibção</title>
     <link rel="stylesheet" href="css/style.css">
@@ -14,15 +15,16 @@
     <div class="conteiner_exibicao">
         <img class="logo" src="img/Art1.png" alt="" srcset="">
         <div class="content_exibicao">
-            <form class="formulario_exibicao">
+            <div class="formulario_exibicao">
                 <label class="label-input icone-mod" for=""> 
                     <i class="fas fa-search"></i>
                     <input class="inputs_exibicao" type="" placeholder="  Pesquisar">
+                    
                 </label>
                 <button class="btn btn-secundario btn-exibicao btn-esquerda">Pesquisar</button>
                    
-                <button class="btn btn-secundario btn-exibicao ">Editar</button>
-            </form>
+                <button class="btn btn-secundario btn-exibicao " onclick="window.location.href = 'edicao.html'">Editar</button>
+              </div>
         <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
@@ -60,6 +62,8 @@
         </table>
     </div>
 </div>
-<script src="js/bootstrap.js"></script>
+
+  <script src="js/bootstrap.js"></script>
+
 </body>
 </html>
