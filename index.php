@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +26,7 @@
             <p class="descricao">Para continuar conectado com a gente</p>
             <p class="descricao">click no botão de login abaixo</p>
             <button id="signin" class="btn btn-primario">Login</button>
+            
             </div>
             <!-- Segundo conteiner -->
             <div class="segunda-coluna">
@@ -121,19 +122,19 @@
     <script src="js/app.js"></script>
     <?php
 
-if(@$_SESSION['cadastro_feito']){
+if(@$_SESSION['cadastro_feito'] == true){
   echo  "<script>alert('cadastro efetuado com Sucesso!');</script>";
   unset($_SESSION['cadastro_feito']);
 }
-if(@$_SESSION['usuario_existe']){
+if(@$_SESSION['usuario_existe'] == true){
   echo  "<script>alert('usuario já cadastrado!');</script>";
   unset($_SESSION['usuario_existe']);
 }
-if(@$_SESSION['vazio']){
+if(@$_SESSION['vazio'] == true){
     echo  "<script>alert('formulário vazio ');</script>";
     unset($_SESSION['vazio']);
   }
-  if(@$_SESSION['nao_autenticado']){
+  if(@$_SESSION['nao_autenticado'] == true){
     echo  "<script>alert('usuario não autenticado!');</script>";
     unset($_SESSION['nao_autenticado']);
   }
