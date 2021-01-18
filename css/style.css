@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
 *{
@@ -385,5 +386,436 @@ margin: 8px;
         left: 0;
         width: 40%;
     }
+
+=======
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.logo{
+    width: 200px;
+    position: absolute;
+    left: 20%;
+    top: 2%;
+    z-index: 20;
+    
+}
+.conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #dddddd;
+}
+/*Esqueci Senha*/
+.content_mudar_senha{
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 500px;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+.content_adicionar{
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 600px;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+.content{
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 960px;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.content::before{
+    content: "";
+    position: absolute;
+    background-color: #ed1c24;
+    width:40%;
+    height: 100%;
+    border-top-left-radius: 15px ;
+    border-bottom-left-radius: 15px ;
+
+    left: 0;
+}
+.title{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.title-primario{
+  color: #ffffff;
+}
+.descricao{
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 25px;
+}
+.btn{
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    width: 170px;
+    align-self: center;
+    border-width: 0 ;
+    margin-top: 1rem;
+
+}
+.btn-primario{
+background-color: transparent;
+border: 1px solid #ffffff;
+transition: background-color .5s;
+}
+.btn-secundario{
+    background-color: #ed1c24;
+    border: 1px solid #ed1c24;
+    transition: background-color .5s;
+
+}
+.btn-secundario:hover{
+    background-color: #ffffff;
+    border: 1px solid  #ed1c24;
+    color:  #ed1c24;
+}
+.btn-primario:hover{
+    background-color: #ffffff;
+    color: #ed1c24;
+}
+.primeiro-content{
+    display: flex; 
+   
+}
+.primeiro-content .segunda-coluna{
+
+    z-index: 11;
+
+}
+.primeira-coluna{
+    text-align: center;
+    width:  40%;
+    z-index: 10;
+    
+}
+.segunda-coluna{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.lista-midia{
+    display: flex;
+    list-style-type: none;
+    
+}
+.lista-midia{
+    margin: 1rem;
+}
+.link-social .item-social-midia{
+    transition: background-color 1s;
+}
+
+.link-social:hover .item-social-midia{
+    background-color:  #ed1c24;
+    color: #ffffff;
+    border-color:#ffffff ;
+
+
+}
+.link-social:not(:first-child){
+    margin-left: 10px;
+}
+.item-social-midia{
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #95a5a6;
+}
+.formulario_mudar_senha{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    text-align: center;
+    position: relative;
+    left: 27%;
+    bottom: 5px;
+
+}
+.formulario_muudar_senha{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    text-align: center;
+    position: relative;
+    left: 27%;
+    bottom: 5px;
+
+}
+.formulario_adcionar{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    text-align: center;
+    position: relative;
+    left: 27%;
+    bottom: 5px;
+
+}
+.formulario_adcionar input{
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+    width: 100%;
+    
+}
+
+
+
+.formulario_mudar_senha input{
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+    width: 100%;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    text-align: center;
+
+}
+.formulario input{
+        height: 45px;
+        border: none;
+        background-color: #ecf0f1;
+        width: 100%;
+}    
+input:-webkit-autofill 
+{    
+    -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+
+.label-input{
+background-color: #ecf0f1;
+display: flex;
+align-items: center;
+margin: 8px;
+}
+
+.icone-mod{
+    color: #7f8c8d;
+    padding: 0 5px ;
+}
+
+/* Segundo conteudo*/
+.segundo-content{
+    position: absolute;
+    display: flex;
+   
+}
+.segundo-content .primeira-coluna{
+    order: 2;
+    z-index: -1;
+
+}
+.segundo-content .segunda-coluna{
+    order: 1;
+    z-index: -1;
+}
+.senha{
+    color: #34495e;
+    font-size: 14px;
+    margin: 15px;
+}
+/* transição de tela 1*/
+.sign-in-js .primeiro-content .primeira-coluna,
+.sign-in-js .primeiro-content .segunda-coluna{
+
+    z-index: -1;
+}
+
+.sign-in-js .segundo-content .segunda-coluna{
+  
+    z-index: 11;
+}
+.sign-in-js .segundo-content .primeira-coluna{
+    z-index: 13;
+}
+.sign-in-js .content::before{
+    left: 60%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius:15px ;
+    animation: slidein 1.5s;
+
+
+    z-index: 12;
+
+}
+.sign-up-js .content::before{
+
+    animation: slideout 1.5s;
+    z-index: 12;
+}
+
+.sign-up-js .segundo-content .primeira-coluna,
+.sign-up-js .segundo-content .segunda-coluna{
+
+    z-index: -1;
+}
+.sign-up-js .primeiro-content .primeira-coluna{
+    z-index: 13;
+}
+
+.sign-up-js .primeiro-content .segunda-coluna{
+    z-index: 11;
+} 
+/* DESCAMENTOS DAS COLUNAS ATRAS DO CONTENT*/
+.sign-in-js .primeiro-content .segunda-coluna{
+
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 1.5s;
+}
+.sign-up-js .segundo-content .segunda-coluna{
+
+    position: relative;
+    z-index: -1;
+    animation: deslocamentoDir 1.5s;
+}
+
+@keyframes deslocamentoEsq {
+
+    from{
+        left: 0;
+        opacity: 1;
+        z-index:12 ;
+    }
+    25%{
+        left: -80px;
+        opacity: .5;
+
+    }
+    50%{
+        left: -100px;
+        opacity: .2;
+    }
+    to{
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+
+}
+@keyframes deslocamentoDir{
+    
+    from{
+        left: 0;
+        z-index: 12;
+    }
+    15%{
+        left: 60px;
+        opacity: .5;
+    }
+    25%{
+        left: 65px;
+    }
+    30%{
+        left: 70px;
+    }
+    50%{
+        left: 100px;
+    }
+ 
+    to{
+        left: 110px;
+        opacity: 0;
+        z-index:-1 ;
+    }
+
+}
+
+
+/* Animação css*/
+@keyframes slidein{
+
+    from{
+
+        left: 0;
+        width: 40%;
+    }
+    25%{
+        left: 5%;
+        width: 50%;
+    }
+    50%{
+        left: 25%;
+        width: 60%;
+    }
+    75%{
+        left: 45%;
+        width: 50%;
+
+    }
+    to{
+        left: 60%;
+        width: 40%;
+    }
+
+}
+@keyframes slideout{
+
+    from{
+        left: 60%;
+        width: 40%;
+      
+    }
+    25%{
+        left: 45%;
+        width: 50%;
+    }
+    50%{
+        left: 25%;
+        width: 60%;
+    }
+    75%{
+        left: 5%;
+        width: 50%;
+
+    }
+    to{
+        
+        left: 0;
+        width: 40%;
+    }
+
 
 }

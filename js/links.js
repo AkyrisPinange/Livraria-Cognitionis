@@ -1,4 +1,7 @@
+
 function link(){
 
-   window.location.href ='../Exibicao.html';
+   window.location.href ='../Exibicao.php';
+
+
 }
