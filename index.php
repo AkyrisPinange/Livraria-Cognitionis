@@ -113,7 +113,7 @@
                              </label>
                              <!-- Fim do login -->
                          
-                        <a class="senha" href="/esqueceSenha.html">Esqueceu a senha?</a>
+                        <a class="senha" href="esqueceSenha.html">Esqueceu a senha?</a>
                         <button class="btn btn-secundario">Login</button>
                     </form> 
                 </div><!-- segundo container -->
@@ -121,20 +121,23 @@
     </div>    
     <script src="js/app.js"></script>
     <?php
-
+    // Verifica se o cadastro foi feito 
 if(@$_SESSION['cadastro_feito'] == true){
   echo  "<script>alert('cadastro efetuado com Sucesso!');</script>";
   unset($_SESSION['cadastro_feito']);
 }
+    //Verifica se o usuário foi cadastrado
 if(@$_SESSION['usuario_existe'] == true){
   echo  "<script>alert('usuario já cadastrado!');</script>";
   unset($_SESSION['usuario_existe']);
 }
+    //verifica se o formulário está vazio
 if(@$_SESSION['vazio'] == true){
     echo  "<script>alert('formulário vazio ');</script>";
     unset($_SESSION['vazio']);
   }
-  if(@$_SESSION['nao_autenticado'] == true){
+    //Verifica se o usuario está autenticado
+if(@$_SESSION['nao_autenticado'] == true){
     echo  "<script>alert('usuario não autenticado!');</script>";
     unset($_SESSION['nao_autenticado']);
   }
