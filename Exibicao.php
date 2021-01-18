@@ -11,6 +11,9 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+      <?php
+      include_once('./funcoes/listagem_l.php');
+    ?>
 </head>
 
 <body>
@@ -38,27 +41,38 @@
               <th scope="col">...</th>
             </tr>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>...</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td>...</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-              <td>...</td>
-            </tr>
+              <?php
+              while($result = mysqli_fetch_assoc($query)){
+                echo('<tr> <th scope="row" >' .$result['id'].'</th> <td>' .$result['nome']. '</td> <td>' .$result['autor'].'</td> <td>'.
+                $result['genero'] .'</td> <td> ... </td> </td>' );
+               
+
+              }
+              ?>
+
+              <!--
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                  <td>...</td>
+                </tr>
+              -->
           </tbody>
         </table>
         </thead>
