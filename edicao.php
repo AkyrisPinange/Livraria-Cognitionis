@@ -17,6 +17,9 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <?php
+    include_once('./funcoes/listagem_l.php');
+  ?>
 
 </head>
 
@@ -50,10 +53,35 @@
                 <th>Nome</th>
                 <th>Autor</th>
                 <th>Gênero</th>
-                <th>...</th>
+                
                 <th>Ações</th>
               </tr>
               <tbody>
+
+              <?php
+              while($result = mysqli_fetch_assoc($query)){
+                echo('<tr> <td>
+                   <span class="custom-checkbox">
+                  <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                  <label for="checkbox1"></label>
+                   </span>
+                    </td>  
+                    <td >'.$result['id'].'</td> <td>' .$result['nome']. '</td> <td>' .$result['autor'].'</td> <td>'.
+                $result['genero'] .'</td>                   <td>
+                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                    data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
+                    data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                  </td> </tr>' );
+               
+
+              }
+              ?>
+
+
+
+
+              <!--
                 <tr>
                   <td>
                     <span class="custom-checkbox">
@@ -73,6 +101,7 @@
                         data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                   </td>
                 </tr>
+                -->
               </tbody>
           </table>
           </thead>
