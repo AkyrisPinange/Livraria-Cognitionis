@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cognitionis</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styleexibicao.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exibção</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styleexibicao.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <?php
+      <?php
       include_once('./funcoes/listagem_l.php');
     ?>
 </head>
+
 <body>
-    <div class="conteiner_exibicao">
-        <img class="logo" src="img/Art1.png" alt="" srcset="">
-        <div class="content_exibicao">
-            <div class="formulario_exibicao">
-                <label class="label-input icone-mod" for=""> 
-                    <i class="fas fa-search"></i>
-                    <input class="inputs_exibicao" type="" placeholder="  Pesquisar">
-                    
-                </label>
-                <button class="btn btn-secundario btn-exibicao btn-esquerda">Pesquisar</button>
-                   
-                <button class="btn btn-secundario btn-exibicao " onclick="window.location.href = 'edicao.html'">Editar</button>
-              </div>
+  <div class="conteiner_exibicao">
+    <img class="logo" src="img/Art1.png" alt="" srcset="">
+    <div class="content_exibicao">
+      <div class="formulario_exibicao">
+        <label class="label-input icone-mod" for="">
+          <i class="fas fa-search"></i>
+          <input class="inputs_exibicao" type="" placeholder="  Pesquisar">
+
+        </label>
+        <button class="btn btn-secundario btn-exibicao btn-esquerda">Pesquisar</button>
+
+        <button class="btn btn-secundario btn-exibicao " onclick="window.location.href = 'edicao.html'">Editar</button>
+      </div>
+      <div class="Div_Barra">
         <table class="table table-striped">
-        <thead class="thead-dark">
+          <thead class="thead-dark">
             <tr>
               <th scope="col">#</th>
               <th scope="col">Nome</th>
@@ -37,7 +40,7 @@
               <th scope="col">Gênero</th>
               <th scope="col">...</th>
             </tr>
-            <tbody>
+          <tbody>
               <?php
               while($result = mysqli_fetch_assoc($query)){
                 echo('<tr> <th scope="row" >' .$result['id'].'</th> <td>' .$result['nome']. '</td> <td>' .$result['autor'].'</td> <td>'.
@@ -70,14 +73,16 @@
                   <td>...</td>
                 </tr>
               -->
-              </tbody>
-            </table>
-          </thead>
+          </tbody>
         </table>
+        </thead>
+        </table>
+      </div>
     </div>
-</div>
+  </div>
 
   <script src="js/bootstrap.js"></script>
 
 </body>
+
 </html>
