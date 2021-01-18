@@ -23,10 +23,22 @@ body{
     height: 100vh;
     background-color: #dddddd;
 }
+/*Esqueci Senha*/
 .content_mudar_senha{
     background-color: #ffffff;
     border-radius: 15px;
     width: 500px;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+.content_adicionar{
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 600px;
     height: 50%;
     display: flex;
     justify-content: space-between;
@@ -165,6 +177,35 @@ transition: background-color .5s;
     bottom: 5px;
 
 }
+.formulario_muudar_senha{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    text-align: center;
+    position: relative;
+    left: 27%;
+    bottom: 5px;
+
+}
+.formulario_adcionar{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    text-align: center;
+    position: relative;
+    left: 27%;
+    bottom: 5px;
+
+}
+.formulario_adcionar input{
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+    width: 100%;
+    
+}
+
+
 
 .formulario_mudar_senha input{
     height: 45px;

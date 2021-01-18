@@ -35,6 +35,7 @@
    display: flex;
    justify-content: space-between;
    
+   
 }
 .formulario_exibicao input{
         height: 45px;
@@ -70,7 +71,15 @@ input:-webkit-autofill
     }
     .btn-esquerda{
         right: 240px;
-    }
+	}
+	.Div_Barra{
+		
+		overflow:scroll;
+		
+		width: 99.6%;
+		height: 88%;
+		left: 3px;
+	}
     /*Edição*/
     
     body {
