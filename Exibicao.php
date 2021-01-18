@@ -28,7 +28,7 @@
         </label>
         <button class="btn btn-secundario btn-exibicao btn-esquerda">Pesquisar</button>
 
-        <button class="btn btn-secundario btn-exibicao " onclick="window.location.href = 'edicao.html'">Editar</button>
+        <button class="btn btn-secundario btn-exibicao " onclick="window.location.href = 'edicao.php'">Editar</button>
       </div>
       <div class="Div_Barra">
         <table class="table table-striped">
