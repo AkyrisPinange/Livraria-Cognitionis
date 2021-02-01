@@ -17,8 +17,14 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <?php
+  <?php
+    session_start();
     include_once('./funcoes/listagem_l.php');
+   
+    if(@($_SESSION['admin']) == false){
+      $_SESSION['barrado'] = true;
+      header('Location: Exibicao.php');
+    }
   ?>
 
 </head>
@@ -34,7 +40,7 @@
         </label>
         <button class="btn btn-secundario btn-edicao btn-esquerda">Pesquisar</button>
         <button class="btn btn-secundario btn-exibicao "
-        onclick= "window.location.href = 'adicionar.html'">
+        onclick= "window.location.href = 'adicionar.php'">
           <i class="fas fa-plus-circle"></i> Adcionar</button>
         <button  class="btn btn-secundario btn-exibicao "  onclick="window.location.href = 'Exibicao.php'">Voltar</button>
         
@@ -68,11 +74,11 @@
                     </td>  
                     <td >'.$result['id'].'</td> <td>' .$result['nome']. '</td> <td>' .$result['autor'].'</td> <td>'.
                 $result['genero'] .'</td>                   <td>
-                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                    data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
-                    data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                  </td> </tr>' );
+                <a href="./editar.php" class="edit" data-toggle="modal"><i class="material-icons"
+                data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
+                data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+              </td> </tr>' );
                
 
               }
@@ -81,27 +87,7 @@
 
 
 
-              <!--
-                <tr>
-                  <td>
-                    <span class="custom-checkbox">
-                      <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                      <label for="checkbox1"></label>
-                    </span>
-                  </td>
-                  <td>1</td>
-                  <td>One Piece </td>
-                  <td>Junki Takegami</td>
-                  <td>Anime</td>
-                  <td>...</td>
-                  <td>
-                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
-                        data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
-                        data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                  </td>
-                </tr>
-                -->
+
               </tbody>
           </table>
           </thead>
@@ -109,11 +95,18 @@
         </div>
     </div>
   </div>
+  <?php
+        //Verifica se o usuario está autenticado
+        if(@$_SESSION['livro_adicionado'] == true){
+          echo  "<script>alert('Livro Cadastrado!');</script>";
+          unset($_SESSION['livro_adicionado']);
+        }
+    ?>
   <script 
   src="js/bootstrap.js"
   src="js/links.js">
-
  </script>
+
   
 </body>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
   <meta charset="UTF-8">
@@ -11,7 +11,8 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-      <?php
+    <?php
+      session_start();
       include_once('./funcoes/listagem_l.php');
     ?>
 </head>
@@ -24,7 +25,7 @@
         <label class="label-input icone-mod" for="">
           <i class="fas fa-search"></i>
           <input class="inputs_exibicao" type="" placeholder="  Pesquisar">
-
+         
         </label>
         <button class="btn btn-secundario btn-exibicao btn-esquerda">Pesquisar</button>
 
@@ -50,29 +51,7 @@
               }
               ?>
 
-              <!--
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                  <td>...</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                  <td>...</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
-                  <td>...</td>
-                </tr>
-              -->
+            
           </tbody>
         </table>
         </thead>
@@ -82,6 +61,14 @@
   </div>
 
   <script src="js/bootstrap.js"></script>
+  <?php
+
+  if(@($_SESSION['barrado']) == true){
+    echo "<script>alert('RECURSO PARA ADMINISTRADORES');</script>";
+     unset($_SESSION['barrado']);
+  }
+
+  ?>
 
 </body>
 

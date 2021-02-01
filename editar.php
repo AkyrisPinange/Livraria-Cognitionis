@@ -15,7 +15,7 @@
         <div class="content_adicionar">
             
             <form class="formulario_adcionar">
-                <H1>Adicionar Livros</H1>
+                <H1>Edição</H1>
                 <div class="input-add">
                 <label class="label-input" for="">
                     <i class="fas fa-book-open icone-mod"></i>
@@ -32,7 +32,7 @@
                 
                 </div>
                 <button class="btn btn-secundario">CONFIRMAR</button>
-                <inputy type="button" onclick="location.href='edicao.html'" class="btn btn-secundario">Voltar</button>
+                <inputy type="button" onclick="location.href='edicao.php'" class="btn btn-secundario">Voltar</button>
             </form>
 
         </div>
