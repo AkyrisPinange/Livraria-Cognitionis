@@ -12,19 +12,19 @@
     <div class="conteiner">
         <div class="content_mudar_senha">
 
-    <form class="formulario_mudar_senha">
+    <form class="formulario_mudar_senha"  method = "POST" action="./funcoes/rec_senha.php">
         <H1>Alterar Senha</H1>
         <label class="label-input" for=""> 
          <i class="far fa-user icone-mod"></i>
-             <input type="text" placeholder="Nome">
+             <input type="text" placeholder="Nome" name="nome">
          </label>
          <label class="label-input" for=""> 
             <i class="fas fa-lock icone-mod" ></i>
-             <input type="email" placeholder="Nova Senha">
+             <input type="password" placeholder="Nova Senha" name="nova_senha">
          </label>
          <label class="label-input" for="nome"> 
              <i class="fas fa-lock icone-mod" ></i>
-             <input type="password" placeholder="Confirme a Senha">
+             <input type="password" placeholder="Senha Atual" name="orig_senha">
          </label>
          <button class="btn btn-secundario">Alterar a Senha</button>
          <inputy type = "button" onclick="location.href='index.php'" class="btn btn-secundario">Voltar</button>

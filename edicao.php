@@ -31,7 +31,10 @@
 
 <body>
   <div class="conteiner_exibicao">
+    <div>
+   
     <img class="logo" src="img/Art1.png" alt="" srcset="">
+  </div>
     <div class="content_exibicao">
       <div class="formulario_exibicao">
         <label class="label-input icone-mod" for="">
@@ -49,41 +52,53 @@
           <table class="table table-striped">
             <thead class="thead-dark">
               <tr>
+                <!--
                 <th>
                   <span class="custom-checkbox">
                     <input type="checkbox" id="selectAll">
                     <label for="selectAll"></label>
                   </span>
                 </th>
-                <th>#</th>
-                <th>Nome</th>
-                <th>Autor</th>
-                <th>Gênero</th>
-                
-                <th>Ações</th>
+  -->
+             <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Autor</th>
+              <th scope="col">Gênero</th>
+              <th scope="col">...</th>
+            </tr>
               </tr>
               <tbody>
-
+              
               <?php
-              while($result = mysqli_fetch_assoc($query)){
-                echo('<tr> <td>
+              /*
+ <td>
                    <span class="custom-checkbox">
                   <input type="checkbox" id="checkbox1" name="options[]" value="1">
                   <label for="checkbox1"></label>
                    </span>
-                    </td>  
-                    <td >'.$result['id'].'</td> <td>' .$result['nome']. '</td> <td>' .$result['autor'].'</td> <td>'.
-                $result['genero'] .'</td>                   <td>
-                <a href="./editar.php" class="edit" data-toggle="modal"><i class="material-icons"
+                    </td> 
+              */
+              while($result = mysqli_fetch_assoc($query)){
+                echo(' <tr>
+                   
+                    <th scope="col" id='.$result["id"].'>'.$result['id'].'</th> <td>' .$result['nome']. '</td> <td>' .$result['autor'].'</td> <td>'.
+                $result['genero'] .'</td> 
+                
+                
+                 
+                <td>  
+                <a  href="editar.php?id='.$result["id"].'" class="edit" data-toggle="modal"><i class="material-icons" 
                 data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
+                
+                <a href="./funcoes/excluir.php?id='.$result["id"].'" class="delete" data-toggle="modal"><i class="material-icons"
                 data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-              </td> </tr>' );
+              </td>  </tr>   ' );
                
 
               }
-              ?>
-
+             
+              ?>  
 
 
 
@@ -94,12 +109,18 @@
           </table>
         </div>
     </div>
+    <button  class="btn btn-secundario btn-exibicao "  onclick="window.location.href = './funcoes/logout.php'" style="position : absolute;">Sair</button>
   </div>
   <?php
         //Verifica se o usuario está autenticado
         if(@$_SESSION['livro_adicionado'] == true){
           echo  "<script>alert('Livro Cadastrado!');</script>";
           unset($_SESSION['livro_adicionado']);
+        }
+        //Verifica o Login
+        if(@($_SESSION['logado']) == false){
+          echo "<script>alert('Faça Login Para Entrar');</script>";
+          header('Location: index.php');
         }
     ?>
   <script 

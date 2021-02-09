@@ -18,7 +18,10 @@
 </head>
 
 <body>
+  
   <div class="conteiner_exibicao">
+    <p style="    position: relative; left: 68%; bottom: 45%; z-index: 20; font-weight: bolder; font-size: 20px;"> Bem-Vindo : <?php
+    echo $_SESSION['user'];  ?> </p>
     <img class="logo" src="img/Art1.png" alt="" srcset="">
     <div class="content_exibicao">
       <div class="formulario_exibicao">
@@ -56,8 +59,9 @@
         </table>
         </thead>
         </table>
-      </div>
+      </div>  
     </div>
+    <button  class="btn btn-secundario btn-exibicao "  onclick="window.location.href = './funcoes/logout.php'" style="position : absolute;">Sair</button>
   </div>
 
   <script src="js/bootstrap.js"></script>
@@ -66,6 +70,12 @@
   if(@($_SESSION['barrado']) == true){
     echo "<script>alert('RECURSO PARA ADMINISTRADORES');</script>";
      unset($_SESSION['barrado']);
+  }
+  //Verifica o Login
+  if(@($_SESSION['logado']) == false){
+    echo "<script>alert('Faça Login Para Entrar');</script>";
+    unset($_SESSION['logado']);
+    header('Location: index.php');
   }
 
   ?>
