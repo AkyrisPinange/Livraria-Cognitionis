@@ -113,7 +113,7 @@
                              </label>
                              <!-- Fim do login -->
                          
-                        <a class="senha" href="esqueceSenha.html">Esqueceu a senha?</a>
+                        <a class="senha" href="esqueceSenha.html">Trocar de Senha ?</a>
                         <button class="btn btn-secundario">Login</button>
                     </form> 
                 </div><!-- segundo container -->
@@ -136,13 +136,20 @@ if(@$_SESSION['vazio'] == true){
     echo  "<script>alert('formulário vazio ');</script>";
     unset($_SESSION['vazio']);
   }
-/*  
+ /* 
     //Verifica se o usuario está autenticado
 if(@$_SESSION['nao_autenticado'] == true){
     echo  "<script>alert('usuario não autenticado!');</script>";
     unset($_SESSION['nao_autenticado']);
   }
   */
+
+      //Verifica se o usuario está autenticado
+if(@$_SESSION['atualizado'] == true){
+    echo  "<script>alert('Senha Atualizada!');</script>";
+    unset($_SESSION['atualizado']);
+  }
+  
 ?>
 </body>
 </html>
