@@ -31,21 +31,44 @@
 
 <body>
   <div class="conteiner_exibicao">
+  <p style="    position: relative; left: 68%; bottom: 45%; z-index: 20; font-weight: bolder; font-size: 20px;"> Bem-Vindo : <?php
+    echo $_SESSION['user'];  ?> </p>
     <div>
    
     <img class="logo" src="img/Art1.png" alt="" srcset="">
   </div>
-    <div class="content_exibicao">
-      <div class="formulario_exibicao">
-        <label class="label-input icone-mod" for="">
+    <div class="content_exibicao" style = "left: -7%" >
+      <div class="formulario_exibicao" >
+      
+      <div>
+      <form class="radio-edit2" style="width: 950px; left: 10px;" action="resultado.php" method= "GET">
+        <label class="label-input icone-mod" for="search_bar">
           <i class="fas fa-search"></i>
-          <input class="inputs_exibicao" type="" placeholder="  Pesquisar">
+          <input class="inputs_exibicao" type="" placeholder="  Pesquisar" id = "search_bar" name="termo"> 
+         
         </label>
-        <button class="btn btn-secundario btn-edicao btn-esquerda">Pesquisar</button>
+        <button class="btn btn-secundario btn-exibicao btn-esquerda" style = "top: -15px; left: 3px;">Pesquisar</button>
+        
+       
+        
+          <div id = "input_skywalker">
+          <input  type="radio"  name="metodo" value="genero" class="skywalker" style = "width: 15px;">
+          <label class="radio-label-genero2" for="genero">Gênero</label><br>
+
+          <input   type="radio"  name="metodo" value="nome" class="skywalker" style = "width: 15px;">
+
+          <label class="radio-label-nome2" for="female">Nome</label><br>
+
+          <input  type="radio" name="metodo" value="id" style = "width: 15px;">
+
+          <label class="radio-label-id2"  for="other">ID</label>
+          </form>
+          </div>
+        </div>
         <button class="btn btn-secundario btn-exibicao "
-        onclick= "window.location.href = 'adicionar.php'">
+        onclick= "window.location.href = 'adicionar.php'"  style="left: -150px;">
           <i class="fas fa-plus-circle"></i> Adcionar</button>
-        <button  class="btn btn-secundario btn-exibicao "  onclick="window.location.href = 'Exibicao.php'">Voltar</button>
+        <button  class="btn btn-secundario btn-exibicao "  onclick="window.location.href = 'Exibicao.php'" style="left: -100px;">Voltar</button>
         
         </div>
         <div class="Div_Barra">

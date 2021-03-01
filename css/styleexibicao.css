@@ -29,7 +29,7 @@
     align-items: center;
     position: relative;
     top: 10px;
-
+	left: -10%;
 }
 .formulario_exibicao{
    display: flex;
@@ -52,34 +52,33 @@ input:-webkit-autofill
     background-color: #ecf0f1;
     display: flex;
     align-items: center;
-    margin: 8px;
-    }
+    margin: 1px;
+    position: relative;
+    top: -10px;
+    height: 50px;
+}
+    
     .icone-mod{
         color: #7f8c8d;
         padding: 0 5px ;
+		position: relative;
     }
     .btn-exibicao{
         position: relative;
         bottom: 5px;
-        right: 17px;
+        right: 12px;
     }
     .btn-edicao{
         position:relative;
         bottom: 6px;
-        left: -107px;
+        left: -17px;
     
     }
     .btn-esquerda{
-        right: 240px;
-	}
-	.Div_Barra{
+        right: 110px;
 		
-		overflow:scroll;
-		
-		width: 99.6%;
-		height: 88%;
-		left: 3px;
 	}
+	
     /*Edição*/
     
     body {
@@ -305,4 +304,102 @@ input:-webkit-autofill
 		font-weight: normal;
 	}	
 
-    
+	/* Scroll bar*/
+	thead, tbody{
+		display: block;  
+	  }
+	  
+	  tbody{
+		overflow-y: scroll;
+		height: 100px;
+		}
+	  
+	  body {
+		font-size: 12px;
+		font-family: arial;
+	  }
+	  
+	  .text-right {
+		text-align: right;
+	  }
+	  .text-center {
+		text-align: center;
+	  }
+	  
+	  .table {
+		border-collapse: collapse;
+		background-color: #fff;
+		width: 100%;
+	  }
+	  .table caption {
+		background-color: #222;
+		color: #fff;
+		font-size: 14px;
+		padding: 5px 0;
+	  }
+	  .table th,
+	  .table td {
+		padding: 5px;
+		width:300px;
+	  }
+	  .table thead {
+		background-color: #333;
+		color: #fff;
+		height: 40px;
+		
+
+	  }
+	  
+	  .table tbody tr {
+		border-bottom: 1px solid #999;
+	  }
+
+
+/*Radio edição*/
+    .radio-edit{
+		
+		display: flex;
+		position: relative;
+		width: 145px;
+		
+	}
+	.radio-label-id{
+
+		position: relative;
+		right: 13px;
+	}
+	.radio-label-genero{
+		position: relative;
+		right: 25px;
+	}
+	.radio-label-nome{
+		position: relative;
+		right: 25px;
+	}
+	
+		/*radio exibição*/
+	.radio-edit2{
+		
+		position: relative;
+		display: flex;
+		width: 150px;
+		bottom: -12px ;
+		right: 100px;
+		
+	}
+	.radio-label-id2{
+		bottom: -9px;
+		position: relative;
+		right: 40px;
+		
+	}
+	.radio-label-genero2{
+		bottom: -9px;
+		position: relative;
+		right: 70px;
+	}
+	.radio-label-nome2{
+		bottom: -9px;
+		position: relative;
+		right: 60px;
+	}

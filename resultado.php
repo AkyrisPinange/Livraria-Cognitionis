@@ -13,7 +13,7 @@
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <?php
       session_start();
-      include_once('./funcoes/listagem_l.php');
+      include_once('./funcoes/pesquisar.php');
     ?>
 </head>
 
