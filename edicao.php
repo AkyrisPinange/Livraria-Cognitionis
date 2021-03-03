@@ -83,12 +83,12 @@
                   </span>
                 </th>
   -->
-             <tr>
+           <tr>
               <th scope="col">#</th>
-              <th scope="col">Nome</th>
-              <th scope="col">Autor</th>
-              <th scope="col">Gênero</th>
-              <th scope="col">...</th>
+              <th scope="col" style="width: 245px">Nome</th>
+              <th scope="col" style="width: 245px">Autor</th>
+              <th scope="col" style="width: 255px">Gênero</th>
+              <th scope="col" style="width: 255px">...</th>
             </tr>
               </tr>
               <tbody>
